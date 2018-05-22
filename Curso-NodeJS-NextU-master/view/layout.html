@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="../styles/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../styles/styles.css">
+	<script type="text/javascript" src="/js/jquery-1.10.2.min.js"></script>
+</head>
+<body>
+	<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<h2 class="text-center">
+				{% block titulo %}
+
+				{% endblock %}
+			</h2>
+		</div>
+	</div>
+	<div class="row clearfix">
+		<div class="col-md-4 column">
+			
+		</div>
+		<div class="col-md-4 column">
+			{% block form %}
+
+			{% endblock %}
+		</div>
+		<div class="col-md-4 column">
+				{% block content %}
+				
+				{% endblock %}			
+		</div>
+	</div>
+	</div>
+	<footer class="footer">
+		&copy; Manuel González Arvelo | 2017
+	</footer>
+
+</body>
+</html>

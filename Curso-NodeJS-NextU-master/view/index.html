@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>NextU</title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="/js/jquery-1.10.2.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="/styles/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/styles/styles.css">
+
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="">Ejercicio Final NodeJS</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="#/">Gallery</a></li>
+            <li><a href="/fileUp">Subir archivos</a></li>
+          </ul>
+        </div>
+    </div>
+</nav>
+<div class="container">
+	<div class="row">
+		<h3 class="text-center">
+			Galery
+		</h3>
+		<br>
+		<br>
+		<div class="disp-superior">	
+		<h2>Thumbnail Gallery</h2>
+		<br>
+			<ul>
+				{% for img in images%}
+				<div class="disp-inferior">
+					<li {% if loop.first %} class="first" {% endif %}>
+						<a href="/canvas/{{img.imgName}}" >
+						<img src="/img/{{ img.imgName }}" class="img-thumbnail"	/>
+						</a>
+					</li>
+				</div>
+				{% endfor%}
+			</ul>
+		</div>
+		
+		
+	</div>
+</div>
+
+<footer class="footer">
+	&copy; Manuel González Arvelo | 2017
+</footer>
+
+
+</body>
+</html>
